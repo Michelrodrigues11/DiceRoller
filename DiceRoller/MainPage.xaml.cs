@@ -2,8 +2,6 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
@@ -11,14 +9,13 @@ public partial class MainPage : ContentPage
 
 	private void OnClicked(object sender, EventArgs e)
 	{
-		count++;
+        Random rnd = new Random();
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+        Console.WriteLine("Generating 10 random numbers:");
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        for (uint contador = 1; contador <= 10; contador++)
+            Console.WriteLine($"{rnd.Next(),15:N0}");
+
+    }
 }
 
