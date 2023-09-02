@@ -17,7 +17,7 @@
                 HorizontalOptions="CenterAndExpand" />
             <Label
                 x:Name="contador"
-                Text="6"
+               
                 FontSize="80"
                 Padding="20"
                 HorizontalOptions="Center"/>
@@ -40,10 +40,10 @@
             
             <Button
                 x:Name="CounterBtn"
+                 Text="6"
                 Text="Rolar o Dado"
                 BackgroundColor="Grey"
                 Margin="40"
-              
                 Clicked="OnClicked"
                 HorizontalOptions="Center" />
 
