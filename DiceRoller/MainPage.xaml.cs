@@ -1,4 +1,4 @@
-﻿namespace DiceRoller;
+﻿using System;
 
 public partial class MainPage : ContentPage
 {
@@ -7,21 +7,20 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	using System;
-using Xamarin.Forms;
+	
 
-namespace SeuNamespace
+namespace DiceRoller
 {
-    public partial class SuaPagina : ContentPage
+    public partial class MainPage : ContentPage
     {
-        public SuaPagina()
+        public MainPage()
         {
             InitializeComponent();
         }
 
         private void OnClicked(object sender, EventArgs e)
         {
-            // Obtém o valor selecionado no Picker (quantidade de lados do dado)
+           
             if (int.TryParse(picker.SelectedItem.ToString(), out int numeroDeLados))
             {
                 
