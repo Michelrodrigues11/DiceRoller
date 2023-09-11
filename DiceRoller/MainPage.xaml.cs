@@ -1,43 +1,22 @@
-﻿using System;
+﻿namespace DiceRoller;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
-	}
-
-	
-
-namespace DiceRoller
-{
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void OnClicked(object sender, EventArgs e)
-        {
-           
-            if (int.TryParse(picker.SelectedItem.ToString(), out int numeroDeLados))
-            {
-                
-                Random random = new Random();
-                int resultado = random.Next(1, numeroDeLados + 1);
+    private void OnButtonClicked(object sender, EventArgs e)
+    {
+        int min = 1;
+        var numeroSelecionado = picker.SelectedItem;
+        //int max = 101;
+        int max = int.Parse(numeroSelecionado.ToString()) + 1;
 
-               
-                contador.Text = resultado.ToString();
-            }
-            else
-            {
-               
-                contador.Text = "Erro";
-            }
-        }
+        Random random = new Random();
+
+        int numeroGerado = random.Next(min, max);
+        numberOutput.Text = numeroGerado.ToString();
     }
 }
-
-}
-
