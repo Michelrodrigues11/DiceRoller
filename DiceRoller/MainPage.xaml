@@ -26,7 +26,7 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Button Text="ROLAR O DADO" BackgroundColor="#4c4c4c" Margin="30"
+            <Button Text="ROLAR O DADO" BackgroundColor="Grey" Margin="30"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked" />
